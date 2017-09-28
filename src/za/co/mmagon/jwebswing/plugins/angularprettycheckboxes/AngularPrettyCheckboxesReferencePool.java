@@ -13,7 +13,8 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 enum AngularPrettyCheckboxesReferencePool implements ReferencePool
 {
-	AngularAnimations(new JavascriptReference("AngularAnimations", 1.6, "bower_components/angular-animate/angular-animate.js"), null);
+	AngularPrettyCheckboxes(new JavascriptReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/angular-pretty-checkable.min.js"),
+	                        new CSSReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/pretty-checkable.css"));
 	/**
 	 * Any sub data
 	 */

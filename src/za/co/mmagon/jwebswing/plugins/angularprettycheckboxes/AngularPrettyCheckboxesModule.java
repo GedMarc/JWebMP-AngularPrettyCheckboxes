@@ -18,7 +18,7 @@ class AngularPrettyCheckboxesModule extends AngularModuleBase
 	 */
 	public AngularPrettyCheckboxesModule()
 	{
-		super("pretty-checkboxes");
+		super("pretty-checkable");
 	}
 	
 	@Override

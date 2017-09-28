@@ -21,8 +21,8 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-AngularPrettyCheckboxes",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
-		pluginOriginalHomepage = "https://docs.angularjs.org/guide/animations",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularAnimate.jar/download"
+		pluginOriginalHomepage = "https://github.com/itslenny/angular-pretty-checkable",
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download"
 ) class AngularPrettyCheckboxesPageConfigurator extends PageConfigurator
 {
 	
@@ -43,7 +43,9 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		{
 			JQueryPageConfigurator.setRequired(page.getBody(), true);
 			AngularPageConfigurator.setRequired(page.getBody(), true);
-			page.getBody().addJavaScriptReference(AngularPrettyCheckboxesReferencePool.AngularAnimations.getJavaScriptReference());
+			page.getBody().addJavaScriptReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getJavaScriptReference());
+			page.getBody().addCssReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getCssReference());
+			
 			page.getAngular().getAngularModules().add(new AngularPrettyCheckboxesModule());
 		}
 		return page;
