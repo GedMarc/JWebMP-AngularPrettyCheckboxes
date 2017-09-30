@@ -199,4 +199,11 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		this.multiple = multiple;
 		return (J) this;
 	}
+	
+	@Override
+	public J setRequired()
+	{
+		addAttribute(AngularAttributes.ngRequired,"true");
+		return (J)this;
+	}
 }
