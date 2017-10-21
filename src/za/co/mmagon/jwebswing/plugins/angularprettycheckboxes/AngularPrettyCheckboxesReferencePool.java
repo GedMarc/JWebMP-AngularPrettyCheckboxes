@@ -29,14 +29,6 @@ enum AngularPrettyCheckboxesReferencePool implements ReferencePool
 	{
 	
 	}
-
-	/**
-	 * A new AngularSlimScrollReferencePool with data
-	 */
-	AngularPrettyCheckboxesReferencePool(String data)
-	{
-
-	}
 	
 	AngularPrettyCheckboxesReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
