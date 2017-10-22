@@ -35,7 +35,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	 * If provided this allows multiple checkboxes to share a single model (stores data as an array)
 	 */
 	private Boolean multiple;
-	
+
 	/**
 	 * Creates a new pretty checkboxes item
 	 */
@@ -43,7 +43,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		setTag("pretty-checkbox");
 	}
-	
+
 	@Override
 	public J bind(String variableName)
 	{
@@ -51,7 +51,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		AngularPageConfigurator.setRequired(this, true);
 		return (J) this;
 	}
-	
+
 	@Override
 	public void init()
 	{
@@ -80,7 +80,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		}
 		super.init();
 	}
-	
+
 	/**
 	 * Required for radio
 	 * Used as true value for checkbox
@@ -91,21 +91,14 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		return value;
 	}
-	
-	/**
-	 * Required for radio
-	 * Used as true value for checkbox
-	 *
-	 * @param value
-	 *
-	 * @return
-	 */
-	public J setValue(String value)
+
+	@Override
+	public J setRequired()
 	{
-		this.value = value;
+		addAttribute(AngularAttributes.ngRequired, "true");
 		return (J) this;
 	}
-	
+
 	/**
 	 * Optional. Defaults to value if ommited.
 	 * <p>
@@ -117,7 +110,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		return label;
 	}
-	
+
 	/**
 	 * Optional. Defaults to value if ommited.
 	 *
@@ -130,7 +123,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		this.label = label;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Disables checkbox if set to true. (also supports ng-disabled)
 	 *
@@ -140,7 +133,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		return disabled;
 	}
-	
+
 	/**
 	 * Disables checkbox if set to true. (also supports ng-disabled)
 	 *
@@ -153,7 +146,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		this.disabled = disabled;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Puts the label before (left of) the control
 	 *
@@ -163,7 +156,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		return labelLeft;
 	}
-	
+
 	/**
 	 * Puts the label before (left of) the control
 	 *
@@ -176,7 +169,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		this.labelLeft = labelLeft;
 		return (J) this;
 	}
-	
+
 	/**
 	 * If provided this allows multiple checkboxes to share a single model (stores data as an array)
 	 *
@@ -186,7 +179,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	{
 		return multiple;
 	}
-	
+
 	/**
 	 * If provided this allows multiple checkboxes to share a single model (stores data as an array)
 	 *
@@ -199,11 +192,68 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		this.multiple = multiple;
 		return (J) this;
 	}
-	
+
+	/**
+	 * Required for radio
+	 * Used as true value for checkbox
+	 *
+	 * @param value
+	 *
+	 * @return
+	 */
 	@Override
-	public J setRequired()
+	public J setValue(String value)
 	{
-		addAttribute(AngularAttributes.ngRequired,"true");
-		return (J)this;
+		this.value = value;
+		return (J) this;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof PrettyCheckbox))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		PrettyCheckbox<?> that = (PrettyCheckbox<?>) o;
+
+		if (getValue() != null ? !getValue().equals(that.getValue()) : that.getValue() != null)
+		{
+			return false;
+		}
+		if (getLabel() != null ? !getLabel().equals(that.getLabel()) : that.getLabel() != null)
+		{
+			return false;
+		}
+		if (getDisabled() != null ? !getDisabled().equals(that.getDisabled()) : that.getDisabled() != null)
+		{
+			return false;
+		}
+		if (getLabelLeft() != null ? !getLabelLeft().equals(that.getLabelLeft()) : that.getLabelLeft() != null)
+		{
+			return false;
+		}
+		return getMultiple() != null ? getMultiple().equals(that.getMultiple()) : that.getMultiple() == null;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getValue() != null ? getValue().hashCode() : 0);
+		result = 31 * result + (getLabel() != null ? getLabel().hashCode() : 0);
+		result = 31 * result + (getDisabled() != null ? getDisabled().hashCode() : 0);
+		result = 31 * result + (getLabelLeft() != null ? getLabelLeft().hashCode() : 0);
+		result = 31 * result + (getMultiple() != null ? getMultiple().hashCode() : 0);
+		return result;
 	}
 }
