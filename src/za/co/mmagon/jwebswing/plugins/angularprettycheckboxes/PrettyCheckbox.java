@@ -5,6 +5,9 @@ import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
 import za.co.mmagon.jwebswing.base.html.Input;
 import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_EMPTY;
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTES;
+
 /**
  * Denotes a physical pretty checkbox that has angular binding capabilities
  *
@@ -59,23 +62,23 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		{
 			if (getMultiple() != null)
 			{
-				addAttribute("multiple", "");
+				addAttribute("multiple", STRING_EMPTY);
 			}
 			if (getLabel() != null)
 			{
-				addAttribute("label", "'" + getLabel() + "'");
+				addAttribute("label", STRING_SINGLE_QUOTES + getLabel() + STRING_SINGLE_QUOTES);
 			}
 			if (getValue() != null)
 			{
-				addAttribute("value", "'" + getValue() + "'");
+				addAttribute("value", STRING_SINGLE_QUOTES + getValue() + STRING_SINGLE_QUOTES);
 			}
 			if (getDisabled() != null)
 			{
-				addAttribute("disabled", "" + getDisabled() + "");
+				addAttribute("disabled", Boolean.toString(getDisabled()));
 			}
 			if (getLabelLeft() != null)
 			{
-				addAttribute("label-left", "" + getLabelLeft() + "");
+				addAttribute("label-left", Boolean.toString(getLabelLeft()));
 			}
 		}
 		super.init();
