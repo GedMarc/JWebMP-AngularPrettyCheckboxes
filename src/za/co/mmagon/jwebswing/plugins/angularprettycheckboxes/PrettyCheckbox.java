@@ -48,6 +48,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public J bind(String variableName)
 	{
 		addAttribute(AngularAttributes.ngModel, variableName);
@@ -96,6 +97,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public J setRequired()
 	{
 		addAttribute(AngularAttributes.ngRequired, "true");
@@ -115,15 +117,18 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	}
 
 	/**
-	 * Optional. Defaults to value if ommited.
+	 * Required for radio
+	 * Used as true value for checkbox
 	 *
-	 * @param label
+	 * @param value
 	 *
 	 * @return
 	 */
-	public J setLabel(String label)
+	@Override
+	@SuppressWarnings("unchecked")
+	public J setValue(String value)
 	{
-		this.label = label;
+		this.value = value;
 		return (J) this;
 	}
 
@@ -137,17 +142,10 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		return disabled;
 	}
 
-	/**
-	 * Disables checkbox if set to true. (also supports ng-disabled)
-	 *
-	 * @param disabled
-	 *
-	 * @return
-	 */
-	public J setDisabled(Boolean disabled)
+	@Override
+	public int hashCode()
 	{
-		this.disabled = disabled;
-		return (J) this;
+		return super.hashCode();
 	}
 
 	/**
@@ -161,15 +159,16 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	}
 
 	/**
-	 * Puts the label before (left of) the control
+	 * Optional. Defaults to value if ommited.
 	 *
-	 * @param labelLeft
+	 * @param label
 	 *
 	 * @return
 	 */
-	public J setLabelLeft(Boolean labelLeft)
+	@SuppressWarnings("unchecked")
+	public J setLabel(String label)
 	{
-		this.labelLeft = labelLeft;
+		this.label = label;
 		return (J) this;
 	}
 
@@ -184,30 +183,30 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	}
 
 	/**
-	 * If provided this allows multiple checkboxes to share a single model (stores data as an array)
+	 * Disables checkbox if set to true. (also supports ng-disabled)
 	 *
-	 * @param multiple
+	 * @param disabled
 	 *
 	 * @return
 	 */
-	public J setMultiple(Boolean multiple)
+	@SuppressWarnings("unchecked")
+	public J setDisabled(Boolean disabled)
 	{
-		this.multiple = multiple;
+		this.disabled = disabled;
 		return (J) this;
 	}
 
 	/**
-	 * Required for radio
-	 * Used as true value for checkbox
+	 * Puts the label before (left of) the control
 	 *
-	 * @param value
+	 * @param labelLeft
 	 *
 	 * @return
 	 */
-	@Override
-	public J setValue(String value)
+	@SuppressWarnings("unchecked")
+	public J setLabelLeft(Boolean labelLeft)
 	{
-		this.value = value;
+		this.labelLeft = labelLeft;
 		return (J) this;
 	}
 
@@ -248,15 +247,17 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 		return getMultiple() != null ? getMultiple().equals(that.getMultiple()) : that.getMultiple() == null;
 	}
 
-	@Override
-	public int hashCode()
+	/**
+	 * If provided this allows multiple checkboxes to share a single model (stores data as an array)
+	 *
+	 * @param multiple
+	 *
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public J setMultiple(Boolean multiple)
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getValue() != null ? getValue().hashCode() : 0);
-		result = 31 * result + (getLabel() != null ? getLabel().hashCode() : 0);
-		result = 31 * result + (getDisabled() != null ? getDisabled().hashCode() : 0);
-		result = 31 * result + (getLabelLeft() != null ? getLabelLeft().hashCode() : 0);
-		result = 31 * result + (getMultiple() != null ? getMultiple().hashCode() : 0);
-		return result;
+		this.multiple = multiple;
+		return (J) this;
 	}
 }
