@@ -3,7 +3,7 @@ package za.co.mmagon.jwebswing.plugins.angularprettycheckboxes;
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.BaseTestClass;
 
-class PrettyCheckboxTest extends BaseTestClass
+public class PrettyCheckboxTest extends BaseTestClass
 {
 	@Test
 	public void testPrettyCheckBox()
