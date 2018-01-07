@@ -25,9 +25,9 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download"
 ) class AngularPrettyCheckboxesPageConfigurator extends PageConfigurator
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/*
 	 * Constructs a new AngularPrettyCheckboxesPageConfigurator
 	 */
@@ -35,17 +35,17 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 	{
 		//Nothing needed
 	}
-	
+
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			JQueryPageConfigurator.setRequired(page.getBody(), true);
-			AngularPageConfigurator.setRequired(page.getBody(), true);
+			JQueryPageConfigurator.setRequired(true);
+			AngularPageConfigurator.setRequired(true);
 			page.getBody().addJavaScriptReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getJavaScriptReference());
 			page.getBody().addCssReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getCssReference());
-			
+
 			page.getAngular().getAngularModules().add(new AngularPrettyCheckboxesModule());
 		}
 		return page;

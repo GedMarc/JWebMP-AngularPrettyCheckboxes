@@ -52,7 +52,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>> extends Input<NoAttribu
 	public J bind(String variableName)
 	{
 		addAttribute(AngularAttributes.ngModel, variableName);
-		AngularPageConfigurator.setRequired(this, true);
+		AngularPageConfigurator.setRequired(true);
 		return (J) this;
 	}
 
