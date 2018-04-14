@@ -1,9 +1,9 @@
-package za.co.mmagon.jwebswing.plugins.angularprettycheckboxes;
+package com.jwebmp.plugins.angularprettycheckboxes;
 
-import za.co.mmagon.jwebswing.base.references.CSSReference;
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
-import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
+import com.jwebmp.base.references.CSSReference;
+import com.jwebmp.base.references.JavascriptReference;
+import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
+import com.jwebmp.base.servlets.interfaces.ReferencePool;
 
 /**
  * References for angular
@@ -11,7 +11,8 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-enum AngularPrettyCheckboxesReferencePool implements ReferencePool
+enum AngularPrettyCheckboxesReferencePool
+		implements ReferencePool
 {
 	AngularPrettyCheckboxes(new JavascriptReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/angular-pretty-checkable.min.js"),
 	                        new CSSReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/pretty-checkable.css"));
@@ -21,15 +22,15 @@ enum AngularPrettyCheckboxesReferencePool implements ReferencePool
 	private String data;
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
-	
+
 	/**
 	 * A new AngularSlimScrollReferencePool
 	 */
 	AngularPrettyCheckboxesReferencePool()
 	{
-	
+
 	}
-	
+
 	AngularPrettyCheckboxesReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
@@ -43,31 +44,31 @@ enum AngularPrettyCheckboxesReferencePool implements ReferencePool
 			this.cssReference.setPriority(RequirementsPriority.DontCare);
 		}
 	}
-	
-	@Override
-	public JavascriptReference getJavaScriptReference()
-	{
-		return javaScriptReference;
-	}
-	
-	@Override
-	public void setJavaScriptReference(JavascriptReference javaScriptReference)
-	{
-		this.javaScriptReference = javaScriptReference;
-	}
-	
+
 	@Override
 	public CSSReference getCssReference()
 	{
 		return cssReference;
 	}
-	
+
 	@Override
 	public void setCssReference(CSSReference cssReference)
 	{
 		this.cssReference = cssReference;
 	}
-	
+
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
+
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+	}
+
 	/**
 	 * Returns the name or the data contained within
 	 *
