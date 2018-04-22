@@ -17,7 +17,6 @@
 
 package com.jwebmp.plugins.angularprettycheckboxes;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.Page;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +24,7 @@ import org.junit.jupiter.api.Test;
  * @author Marc Magon
  */
 public class AngularPrettyCheckboxesPageConfiguratorTest
-		extends BaseTestClass
+
 {
 
 	public AngularPrettyCheckboxesPageConfiguratorTest()
@@ -35,7 +34,7 @@ public class AngularPrettyCheckboxesPageConfiguratorTest
 	@Test
 	public void testSomeMethod()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		System.out.println(p.toString(0));
 	}
 

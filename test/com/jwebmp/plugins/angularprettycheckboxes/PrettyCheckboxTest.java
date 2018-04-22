@@ -17,11 +17,10 @@
 
 package com.jwebmp.plugins.angularprettycheckboxes;
 
-import com.jwebmp.BaseTestClass;
 import org.junit.jupiter.api.Test;
 
 public class PrettyCheckboxTest
-		extends BaseTestClass
+
 {
 	@Test
 	public void testPrettyCheckBox()
