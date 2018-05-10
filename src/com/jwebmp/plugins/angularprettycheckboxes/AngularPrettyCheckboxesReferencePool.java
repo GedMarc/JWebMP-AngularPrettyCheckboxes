@@ -15,7 +15,7 @@ enum AngularPrettyCheckboxesReferencePool
 		implements ReferencePool
 {
 	AngularPrettyCheckboxes(new JavascriptReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/angular-pretty-checkable.min.js"),
-	                        new CSSReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/pretty-checkable.css"));
+	                        new CSSReference("AngularPrettyCheckboxes", 1.6, "bower_components/angular-pretty-checkable/dist/pretty-checkable.min.css"));
 	/**
 	 * Any sub data
 	 */
