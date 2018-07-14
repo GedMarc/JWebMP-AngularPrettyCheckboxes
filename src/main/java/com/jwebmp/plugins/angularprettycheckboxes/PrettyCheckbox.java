@@ -159,12 +159,6 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 	}
 
 	@Override
-	public int hashCode()
-	{
-		return super.hashCode();
-	}
-
-	@Override
 	public boolean equals(Object o)
 	{
 		if (this == o)
@@ -199,6 +193,12 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 			return false;
 		}
 		return getMultiple() != null ? getMultiple().equals(that.getMultiple()) : that.getMultiple() == null;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return super.hashCode();
 	}
 
 	/**
