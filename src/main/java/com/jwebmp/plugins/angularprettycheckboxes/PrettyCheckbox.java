@@ -17,11 +17,11 @@
 
 package com.jwebmp.plugins.angularprettycheckboxes;
 
-import com.jwebmp.base.angular.AngularAttributes;
-import com.jwebmp.base.angular.AngularPageConfigurator;
-import com.jwebmp.base.html.Input;
-import com.jwebmp.base.html.attributes.NoAttributes;
-import com.jwebmp.utilities.StaticStrings;
+import com.jwebmp.core.base.angular.AngularAttributes;
+import com.jwebmp.core.base.angular.AngularPageConfigurator;
+import com.jwebmp.core.base.html.Input;
+import com.jwebmp.core.base.html.attributes.NoAttributes;
+import com.jwebmp.core.utilities.StaticStrings;
 
 /**
  * Denotes a physical pretty checkbox that has angular binding capabilities
