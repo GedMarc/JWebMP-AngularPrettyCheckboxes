@@ -18,10 +18,10 @@
 package com.jwebmp.plugins.angularprettycheckboxes;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author Marc Magon
@@ -39,12 +39,10 @@ import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://github.com/itslenny/angular-pretty-checkable",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download") class AngularPrettyCheckboxesPageConfigurator
-		extends PageConfigurator
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download")
+public class AngularPrettyCheckboxesPageConfigurator
+		implements IPageConfigurator
 {
-
-	private static final long serialVersionUID = 1L;
-
 	/*
 	 * Constructs a new AngularPrettyCheckboxesPageConfigurator
 	 */
@@ -64,10 +62,6 @@ import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 			    .addJavaScriptReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getJavaScriptReference());
 			page.getBody()
 			    .addCssReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getCssReference());
-
-			page.getAngular()
-			    .getAngularModules()
-			    .add(new AngularPrettyCheckboxesModule());
 		}
 		return page;
 	}
