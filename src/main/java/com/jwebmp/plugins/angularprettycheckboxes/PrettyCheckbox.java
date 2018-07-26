@@ -161,38 +161,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof PrettyCheckbox))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		PrettyCheckbox<?> that = (PrettyCheckbox<?>) o;
-
-		if (getValue() != null ? !getValue().equals(that.getValue()) : that.getValue() != null)
-		{
-			return false;
-		}
-		if (getLabel() != null ? !getLabel().equals(that.getLabel()) : that.getLabel() != null)
-		{
-			return false;
-		}
-		if (getDisabled() != null ? !getDisabled().equals(that.getDisabled()) : that.getDisabled() != null)
-		{
-			return false;
-		}
-		if (getLabelLeft() != null ? !getLabelLeft().equals(that.getLabelLeft()) : that.getLabelLeft() != null)
-		{
-			return false;
-		}
-		return getMultiple() != null ? getMultiple().equals(that.getMultiple()) : that.getMultiple() == null;
+		return super.equals(o);
 	}
 
 	@Override

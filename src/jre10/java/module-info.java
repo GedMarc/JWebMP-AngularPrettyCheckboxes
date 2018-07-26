@@ -11,4 +11,5 @@ module com.jwebmp.plugins.angularprettycheckboxes {
 	provides IPageConfigurator with AngularPrettyCheckboxesPageConfigurator;
 	provides IAngularModule with AngularPrettyCheckboxesModule;
 
+	opens com.jwebmp.plugins.angularprettycheckboxes to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
