@@ -7,6 +7,7 @@ module com.jwebmp.plugins.angularprettycheckboxes {
 	exports com.jwebmp.plugins.angularprettycheckboxes;
 
 	requires com.jwebmp.core;
+	requires java.validation;
 
 	provides IPageConfigurator with AngularPrettyCheckboxesPageConfigurator;
 	provides IAngularModule with AngularPrettyCheckboxesModule;
