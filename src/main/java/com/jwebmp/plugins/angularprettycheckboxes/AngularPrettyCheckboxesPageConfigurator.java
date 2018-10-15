@@ -36,14 +36,14 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "angular,forms, checkboxes, ui,web ui, framework",
 		pluginSubtitle = "Pure angular pretty checkbox / radio directive. Makes it incredibly simple to have pretty checkboxes / radios in angular.",
 		pluginSourceUrl = "https://github.com/itslenny/angular-pretty-checkable",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-AngularPrettyCheckboxes/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-AngularPrettyCheckboxes",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-AngularPrettyCheckboxes/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-AngularPrettyCheckboxes",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://github.com/itslenny/angular-pretty-checkable",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download")
 public class AngularPrettyCheckboxesPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<AngularPrettyCheckboxesPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
