@@ -31,7 +31,6 @@ public class AngularPrettyCheckboxesModule
 		implements IAngularModule<AngularPrettyCheckboxesModule>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new AngularPrettyCheckboxesModule
