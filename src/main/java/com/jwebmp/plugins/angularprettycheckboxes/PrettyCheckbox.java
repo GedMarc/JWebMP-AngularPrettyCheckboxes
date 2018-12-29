@@ -67,7 +67,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 	@SuppressWarnings("unchecked")
 	public J bind(String variableName)
 	{
-		addAttribute(AngularAttributes.ngModel, variableName);
+		addAttribute(AngularAttributes.ngModel.getAttributeName(), variableName);
 		AngularPageConfigurator.setRequired(true);
 		return (J) this;
 	}
@@ -76,7 +76,7 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 	@SuppressWarnings("unchecked")
 	public J setRequired()
 	{
-		addAttribute(AngularAttributes.ngRequired, "true");
+		addAttribute(AngularAttributes.ngRequired.getAttributeName(), "true");
 		return (J) this;
 	}
 
@@ -159,15 +159,15 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 	}
 
 	@Override
-	public boolean equals(Object o)
-	{
-		return super.equals(o);
-	}
-
-	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 
 	/**

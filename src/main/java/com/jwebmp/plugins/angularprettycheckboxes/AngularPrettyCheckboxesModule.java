@@ -18,7 +18,6 @@
 package com.jwebmp.plugins.angularprettycheckboxes;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * The module getting loaded into angular
@@ -27,11 +26,8 @@ import com.jwebmp.core.base.angular.services.IAngularModule;
  * @since 08 Jun 2017
  */
 public class AngularPrettyCheckboxesModule
-		extends AngularModuleBase
-		implements IAngularModule<AngularPrettyCheckboxesModule>
+		extends AngularModuleBase<AngularPrettyCheckboxesModule>
 {
-
-
 	/*
 	 * Constructs a new AngularPrettyCheckboxesModule
 	 */
