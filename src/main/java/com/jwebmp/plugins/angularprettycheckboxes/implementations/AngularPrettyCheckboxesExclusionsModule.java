@@ -1,6 +1,5 @@
 package com.jwebmp.plugins.angularprettycheckboxes.implementations;
 
-import com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions;
 import com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions;
 
 import javax.validation.constraints.NotNull;
@@ -8,18 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class AngularPrettyCheckboxesExclusionsModule
-		implements IGuiceScanModuleExclusions<AngularPrettyCheckboxesExclusionsModule>,
-				           IGuiceScanJarExclusions<AngularPrettyCheckboxesExclusionsModule>
+		implements IGuiceScanModuleExclusions<AngularPrettyCheckboxesExclusionsModule>
 {
-
-	@Override
-	public @NotNull Set<String> excludeJars()
-	{
-		Set<String> strings = new HashSet<>();
-		strings.add("jwebmp-angular-pretty-checkboxes-*");
-		return strings;
-	}
-
 	@Override
 	public @NotNull Set<String> excludeModules()
 	{
