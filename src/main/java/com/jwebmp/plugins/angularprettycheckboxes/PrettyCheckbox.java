@@ -23,6 +23,9 @@ import com.jwebmp.core.base.html.Input;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
 import com.jwebmp.core.utilities.StaticStrings;
 
+import static com.guicedee.guicedinjection.json.StaticStrings.STRING_EMPTY;
+import static com.guicedee.guicedinjection.json.StaticStrings.STRING_SINGLE_QUOTES;
+
 /**
  * Denotes a physical pretty checkbox that has angular binding capabilities
  *
@@ -87,15 +90,15 @@ public class PrettyCheckbox<J extends PrettyCheckbox<J>>
 		{
 			if (getMultiple() != null)
 			{
-				addAttribute("multiple", StaticStrings.STRING_EMPTY);
+				addAttribute("multiple", STRING_EMPTY);
 			}
 			if (getLabel() != null)
 			{
-				addAttribute("label", StaticStrings.STRING_SINGLE_QUOTES + getLabel() + StaticStrings.STRING_SINGLE_QUOTES);
+				addAttribute("label", STRING_SINGLE_QUOTES + getLabel() + STRING_SINGLE_QUOTES);
 			}
 			if (getValue() != null)
 			{
-				addAttribute("value", StaticStrings.STRING_SINGLE_QUOTES + getValue() + StaticStrings.STRING_SINGLE_QUOTES);
+				addAttribute("value", STRING_SINGLE_QUOTES + getValue() + STRING_SINGLE_QUOTES);
 			}
 			if (getDisabled() != null)
 			{
