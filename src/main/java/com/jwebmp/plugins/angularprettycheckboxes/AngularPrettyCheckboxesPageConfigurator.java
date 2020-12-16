@@ -20,6 +20,7 @@ package com.jwebmp.plugins.angularprettycheckboxes;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.base.angular.AngularPageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 
@@ -41,7 +42,12 @@ import jakarta.validation.constraints.NotNull;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://github.com/itslenny/angular-pretty-checkable",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularPrettyCheckboxes.jar/download")
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.angular/jwebmp-angular-pretty-checkboxes",
+		pluginGroupId = "com.jwebmp.plugins.angular",
+		pluginArtifactId = "jwebmp-angular-pretty-checkboxes",
+		pluginModuleName = "com.jwebmp.plugins.angularprettycheckboxes",
+		pluginStatus = PluginStatus.Released
+)
 public class AngularPrettyCheckboxesPageConfigurator
 		implements IPageConfigurator<AngularPrettyCheckboxesPageConfigurator>
 {
