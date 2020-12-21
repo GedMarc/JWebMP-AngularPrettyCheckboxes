@@ -30,9 +30,9 @@ import jakarta.validation.constraints.NotNull;
  * @author GedMarc
  * @since 08 Jun 2017
  */
-@PluginInformation(pluginName = "Angular Pretty Checkboxes",
+@PluginInformation(pluginName = "Pretty Checkboxes",
 		pluginDescription = "Pure angular pretty checkbox / radio directive. Makes it incredibly simple to have pretty checkboxes / radios in angular.",
-		pluginUniqueName = "jwebswing-angular-pretty-checkboxes",
+		pluginUniqueName = "angular-pretty-checkboxes",
 		pluginVersion = "1.7.4",
 		pluginCategories = "angular,forms, checkboxes, ui,web ui, framework",
 		pluginSubtitle = "Pure angular pretty checkbox / radio directive. Makes it incredibly simple to have pretty checkboxes / radios in angular.",
