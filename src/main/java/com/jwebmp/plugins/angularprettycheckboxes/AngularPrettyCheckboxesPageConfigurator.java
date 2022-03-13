@@ -95,8 +95,8 @@ public class AngularPrettyCheckboxesPageConfigurator
 	{
 		if (!page.isConfigured() && enabled())
 		{
-			JQueryPageConfigurator.setRequired(true);
-			AngularPageConfigurator.setRequired(true);
+			
+			
 			page.getBody()
 			    .addJavaScriptReference(AngularPrettyCheckboxesReferencePool.AngularPrettyCheckboxes.getJavaScriptReference());
 			page.getBody()
