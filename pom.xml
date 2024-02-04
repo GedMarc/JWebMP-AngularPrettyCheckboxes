@@ -4,14 +4,14 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>dev-kit</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../../../../../../</relativePath>
     </parent>
     <groupId>com.jwebmp.plugins.angular</groupId>
 
     <artifactId>jwebmp-angular-pretty-checkboxes</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
     <name>Angular Pretty Checkboxes</name>
     <description>The JWebSwing implementation for Angular Pretty Checkboxes</description>
     <url>https://github.com/GedMarc/JWebSwing-AngularPrettyCheckboxes</url>

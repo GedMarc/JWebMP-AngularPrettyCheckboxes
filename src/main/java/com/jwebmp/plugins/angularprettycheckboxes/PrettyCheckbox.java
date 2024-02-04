@@ -23,8 +23,8 @@ import com.jwebmp.core.base.html.Input;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
 import com.jwebmp.core.utilities.StaticStrings;
 
-import static com.guicedee.guicedinjection.json.StaticStrings.STRING_EMPTY;
-import static com.guicedee.guicedinjection.json.StaticStrings.STRING_SINGLE_QUOTES;
+import static com.guicedee.services.jsonrepresentation.json.StaticStrings.STRING_EMPTY;
+import static com.guicedee.services.jsonrepresentation.json.StaticStrings.STRING_SINGLE_QUOTES;
 
 /**
  * Denotes a physical pretty checkbox that has angular binding capabilities
